@@ -10,7 +10,7 @@ public class User implements Serializable{
 	
 	private Long id;
 	private String name;
-	private String emil;
+	private String email;
 	private String phone;
 	private String password;
 	
@@ -20,11 +20,11 @@ public class User implements Serializable{
 	}
 
 
-	public User(Long id, String name, String emil, String phone, String password) {
+	public User(Long id, String name, String email, String phone, String password) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.emil = emil;
+		this.email = email;
 		this.phone = phone;
 		this.password = password;
 	}
@@ -51,12 +51,12 @@ public class User implements Serializable{
 
 
 	public String getEmil() {
-		return emil;
+		return email;
 	}
 
 
 	public void setEmil(String emil) {
-		this.emil = emil;
+		this.email = email;
 	}
 
 
