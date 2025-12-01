@@ -3,21 +3,33 @@ package com.rma.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tab_user")
 public class User implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+	
+	
+
+
+
 	private String email;
 	private String phone;
 	private String password;
 	
 	
-	public User() {
-		
-	}
+	public User() {}
 
 
 	public User(Long id, String name, String email, String phone, String password) {
@@ -50,12 +62,12 @@ public class User implements Serializable{
 	}
 
 
-	public String getEmil() {
+	public String getEmail() {
 		return email;
 	}
 
 
-	public void setEmil(String emil) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 
