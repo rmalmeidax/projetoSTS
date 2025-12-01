@@ -20,8 +20,8 @@ public class UserService {
 	}
 	
 	public User findById(Long id) {
-		Optional<User> obj = repository.findById(id);
-		return obj.get();
+		return repository.findById(id).orElseThrow(() -> new RuntimeException ("ID não encontrado"));
+		
 		
 		
 	}
